@@ -59,7 +59,7 @@ p {
     margin: 0;
 }
 
-/****** loading***********/
+/****** loading ***********/
 
 .loading {
     width: 100%;
@@ -137,4 +137,193 @@ p {
     height: 35px;
     border-radius: 50%;
     background-color: #ffab91;
+}
+
+/******* header *********/
+
+
+header .head {
+    padding: 40px 0;
+}
+header .head .logo {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+}
+header .degree-c-f {
+    display: flex;
+    justify-content: flex-end;
+}
+header .degree-c-f span {
+    width: 76px;
+    height: 48px;
+    color: #FFF;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+/******* main-content *********/
+
+button[aria-selected="true"] {
+    border-bottom: 2px solid #FFF;
+    color: #FFF;
+}
+header .degree-c-f .active {
+    background: rgba(255, 255, 255, 0.25);
+    border-left: 2px solid #FFFFFF;
+}
+.weahter {
+    padding: 170px 0 105px;
+}
+.weahter .weather-body{
+    color: #FFF;
+    padding-bottom: 80px;
+}
+.weahter .weather-body h1 {
+    font-size: 64px;
+    margin-bottom: 10px;
+    line-height: 75px;
+}
+.weahter .weather-body .date {
+    font-size: 20px;
+    font-weight: bold;
+}
+.weahter .weather-body .weather-icon i {
+    margin: 35px 0 15px;
+    font-size: 60px;
+    color: #FCB641;
+    font-weight: bold;
+}
+.weahter .weather-body h4 {
+    font-size: 30px;
+}
+.weahter .town-degree {text-align: right;}
+.weahter .town-degree h2 {
+    font-size: 117px;
+    position: relative;
+    display: inline-block;
+}
+.weahter .town-degree h2 .icon {
+    font-size: 100px;
+    top: -39px;
+}
+.weahter .town-degree .icon {
+    position: absolute;
+    top: -16px;
+    right: -40px;
+}
+.weahter .tempRange {
+    font-size: 48px;
+    margin: 12px 0 22px;
+    display: flex;
+    justify-content: flex-end;
+}
+.weahter .tempRange .high,
+.weahter .tempRange .low {
+    position: relative;
+    display: inline-block;
+    margin: 0 20px;
+}
+.weahter .tempRange .low
+{
+    color: rgba(255, 255, 255, 0.75);
+}
+.weahter .tempRange .icon {right: -19px;}
+.weahter .town-degree .desc {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.nav-pills {
+    border-bottom: 1px solid #FFF;
+}
+.nav-pills .nav-link {
+    color: rgba(255, 255, 255, 0.75);
+    font-weight: bold;
+    font-size: 22px;
+    cursor: pointer;
+    padding-bottom: 14px;
+    margin-right: 50px;
+    position: relative;
+    border-radius: 0;
+}
+.nav-pills .nav-link:last-of-type {margin-right: 0}
+.nav-pills .nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: -1.5px;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: transparent;
+    border-bottom: 2px solid transparent;
+}
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    color: #FFF;
+    background: transparent;
+}
+.nav-pills .nav-link.active:before,
+.nav-pills .show>.nav-link:before {
+    border-color: #FFF;
+}
+.hidden {display: none !important;}
+.forecast {
+    display: flex;
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+    color: #FFF;
+    padding: 38px 0;
+
+}
+.forecast .box {
+    width: 126px;
+    min-width: 156px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.forecast .box p {font-size: 22px;}
+.forecast .box i {
+    font-size: 30px;
+    color: #FCB641;
+    margin: 20px 0;
+}
+.forecast .box .mini-temp {
+    position: relative;
+    font-size: 36px;
+}
+.forecast .box .mini-temp .icon
+{
+    position: absolute;
+    top: -16px;
+    right: -19px;
+
+}
+.forecast::-webkit-scrollbar { 
+    width: 3px;
+    height: 7px;
+} 
+.forecast::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 2px rgba(255, 255, 255, 1);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+.forecast::-webkit-scrollbar-thumb {
+	background-color: #FfF;
+	outline: 1px solid #fff;
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-ms-border-radius: 20px;
+	-o-border-radius: 20px;
 }
