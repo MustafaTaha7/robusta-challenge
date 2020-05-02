@@ -1,0 +1,60 @@
+@font-face {
+    font-family: "WorkSans";
+    src: url("../fonts/WorkSans-Regular"); /* IE9 Compat Modes */
+    src: url("../fonts/WorkSans-Regular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("../fonts/WorkSans-Regular.otf") format("opentype"), /* Open Type Font */
+    url("../fonts/WorkSans-Regular.svg") format("svg"), /* Legacy iOS */
+    url("../fonts/WorkSans-Regular.ttf") format("truetype"), /* Safari, Android, iOS */
+    url("../fonts/WorkSans-Regular.woff") format("woff"), /* Modern Browsers */
+    url("../fonts/WorkSans-Regular.woff2") format("woff2"); /* Modern Browsers */
+    font-weight: normal;
+    font-style: normal;
+}
+/*General css*/
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family:'WorkSans';
+    background: #29536B url('../img/Background.png') no-repeat;
+    background-size: cover;
+}
+body::-webkit-scrollbar { width: 7px;} 
+body::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+body::-webkit-scrollbar-thumb {
+    background-color: #000;
+    outline: 1px solid #000;
+	border-radius: 20px;
+}
+
+::selection {
+    background: #000; /* WebKit/Blink Browsers */
+	color: #fff;
+}
+::-moz-selection {
+    background: #000; /* Gecko Browsers */
+	color: #fff;
+}
+a {
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    color: #FFF ;
+    text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+	color: #FFF ;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: bold;
+    margin: 0;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
