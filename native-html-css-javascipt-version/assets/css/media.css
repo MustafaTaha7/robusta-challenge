@@ -1,0 +1,61 @@
+
+@media screen and (max-width: 1024px){
+    .weahter {padding: 60px 0 60px;}
+    .weahter .weather-body h1 {font-size: 50px;}
+    .weahter .weather-body .date,
+    .weahter .town-degree .desc {font-size: 18px;}
+    .weahter .weather-body h4,
+    .tabs button,
+    .forecast .box p {font-size: 20px;}
+    .weahter .town-degree h2 {font-size: 120px;}
+    .weahter .town-degree h2 .icon{top: -23px}
+    .weahter .town-degree .icon {right: -17px;}
+    .weahter .town-degree h2 .icon {font-size: 60px;}
+    .weahter .tempRange {font-size: 35px;}
+    .weahter .weather-body {padding-bottom: 40px;}
+    .forecast .box .mini-temp {font-size: 25px;}
+}
+@media screen and (max-width: 991px){
+    .wrapper {width: 90%;}
+    .weahter .weather-body h1 {
+        font-size: 35px;
+        line-height: 35px;
+    }
+    .weahter .weather-body .date, 
+    .weahter .town-degree .desc {font-size: 16px;}
+    .weahter .weather-body h4, 
+    .tabs button, 
+    .forecast .box p { font-size: 18px;}
+    .weahter .town-degree {margin-right: 17px;}
+    .weahter .town-degree h2 {font-size: 90px;}
+    .weahter .tempRange {font-size: 25px;}
+    .forecast .box {min-width: 107px;}
+    .forecast .box img {max-width: 44px;}
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px){
+    header .head .logo {font-size: 30px;}
+}
+
+@media screen and (max-width: 480px){
+    
+    .weahter .weather-body {flex-direction: column;}
+    .weahter .town {text-align: center;}
+    .weahter .town-degree {
+        margin: 20px 0 0 0;
+        text-align: center;
+    }
+    header .head .logo {font-size: 19px;}
+    header .head .degree-c-f span {
+        width: 50px;
+        height: 48px;
+        font-size: 17px;
+    }
+    .weahter .tempRange {justify-content: center;}
+}
+@media screen and (max-width: 426px){
+    .wrapper {
+        padding: 0;
+        width: 80%;
+    }
+}
