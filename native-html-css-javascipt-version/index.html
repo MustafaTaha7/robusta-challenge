@@ -44,6 +44,84 @@
         </div>
     </header>
     <!-------- Header Ends Her ------->
+
+    <main>
+
+        <!-------- Weather Body Starts Her ------->
+    
+        <section class="weahter">
+    
+            <div class="wrapper">
+                <div class="weather-body">
+                    <div class="town">
+                        <h1 id="location-name">New Cairo</h1>
+                        <p id="date" class="date">Friday 20, 2020</p>
+                        <span id="icon" class="weather-icon"></span>
+                        <h4 id="weather-status">Cloudy</h4>
+                    </div>
+                    <div class="town-degree">
+                        <h2><span id="weather-temperature" class="degree degree-digit">72</span><span
+                                class="icon">&#176;</span></h2>
+                        <div class="tempRange">
+                            <p class="high">
+                                <span id="weather-temperature-high" class="degree degree-digit"> 81 </span>
+                                <span class="icon">&#176;</span>
+                            </p>
+                            /
+                            <p class="low">
+                                <span id="weather-temperature-low" class=" degree degree-digit"> 63 </span>
+                                <span class="icon">&#176;</span>
+                            </p>
+                        </div>
+                        <span id="weather-status-description" class="desc">Cloudy throughout the day</span>
+                    </div>
+                </div>
+    
+                <div class="tabs">
+    
+                    <div class="tablist" role="tablist" aria-label="weather for today">
+                        <button role="tab" aria-selected="true" id="hourly">Hourly</button>
+                        <button role="tab" aria-selected="false" id="daily">Daily</button>
+                    </div>
+    
+                    <!-------- Hourly Weather Starts Her ------->
+                    <div class="tabpanel" role="tabpanel" aria-labelledby="hourly">
+                        <div id="hourly-content" class="forecast">
+                            <div class="box hidden">
+                                <p class="hour">Now</p>
+                                <span class="hourly-weather-icon"></span>
+                                <p class="mini-temp">
+                                    <span class="degree mini-degree">81</span>
+                                    <span class="icon">&#176;</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-------- Hourly Weather Ends Her ------->
+    
+                    <!-------- Daily Weather Starts Her ------->
+                    <div role="tabpanel" aria-labelledby="daily" hidden>
+                        <div id="daily-content" class="forecast">
+                            <div class="box hidden">
+                                <p class="hour">Now</p>
+                                <span class="hourly-weather-icon"></span>
+                                <p class="mini-temp">
+                                    <span class="degree mini-degree">81</span>
+                                    <span class="icon">&#176;</span>
+                                </p>
+                            </div>
+    
+                        </div>
+                    </div>
+                    <!-------- Daily Weather Ends Her ------->
+    
+                </div>
+            </div>
+        </section>
+    
+        <!-------- Weather Body Ends Her ------->
+    
+    </main>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
