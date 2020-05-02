@@ -1,7 +1,17 @@
 const DARK_SKY_ENDPOINT = "https://api.darksky.net/forecast/a177f8481c31fa96c3f95ad4f4f84610/"
 const PROXY = 'https://cors-anywhere.herokuapp.com/'
+let degreeInC = document.querySelector('#celsius')
+let degreeInF = document.querySelector('#fahrenheit')
 
 document.onload = initApp()
+
+degreeInF.addEventListener('click', function () {
+    degreeSwitcher(degreeInF, 'fahrenheit')
+})
+
+degreeInC.addEventListener('click', function () {
+    degreeSwitcher(degreeInC, 'celsius')
+})
 
 /**
  * Initialize the weather app.
@@ -23,6 +33,20 @@ function getWeather(data) {
     document.querySelector('#weather-temperature-high').textContent = Math.round(data.daily.data[0].apparentTemperatureHigh)
     document.querySelector('#weather-temperature-low').textContent = Math.round(data.daily.data[0].apparentTemperatureLow)
     document.querySelector('#icon').innerHTML = `<i class="wi wi-forecast-io-${data.currently.icon}">`
+}
+
+function degreeSwitcher(button, degreeType) {
+    if (!button.classList.contains('active') && degreeType === button.getAttribute('id')) {
+        degreeInC.classList.remove("active")
+        degreeInF.classList.remove("active")
+        button.classList.add('active')
+
+        document.querySelectorAll('.degree').forEach(degree => {
+            degree.innerHTML = (degreeType === 'fahrenheit')
+                ? celsiusToFahrenheit((degree.innerHTML))
+                : fahrenheitToCelsius((degree.innerHTML))
+        })
+    }
 }
 
 function getWeatherElementTime(data, isHourly) {
@@ -76,3 +100,11 @@ function showWeather(lat, long) {
         })
 }
 
+
+function celsiusToFahrenheit(degree) {
+    return Math.round((degree * 9 / 5) + 32)
+}
+
+function fahrenheitToCelsius(degree) {
+    return Math.round((degree - 32) * 5 / 9)
+}
