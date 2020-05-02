@@ -22,7 +22,34 @@ degreeInC.addEventListener('click', function () {
 
 function initApp() {
 
-    showWeather('30.007414', '31.491318')
+    getCurrentLatitudeAndLongitude(function (latLng) {
+        getCurrentLocationName(latLng.lat, latLng.lng)
+        showWeather(latLng.lat, latLng.lng)
+    })
+}
+
+function getCurrentLatitudeAndLongitude(callback) {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function (position) {
+            callback({
+                "lat": position.coords.latitude,
+                "lng": position.coords.longitude
+            })
+        })
+    } else {
+        window.alert("Could not get location")
+    }
+}
+
+function getCurrentLocationName(lat, lng) {
+    let latLng = new google.maps.LatLng(lat, lng)
+    let goeCoder = new google.maps.Geocoder()
+
+    goeCoder.geocode({'latLng': latLng}, function (results, status) {
+        (status === google.maps.GeocoderStatus.OK)
+            ? document.querySelector('#location-name').innerText = results[0].address_components[1].long_name
+            : alert(status)
+    })
 }
 
 function getWeather(data) {
